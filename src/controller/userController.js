@@ -5,7 +5,7 @@ const model = initModels(sequelize);
 
 const getUser = async (req,res) => {
     try {
-        let {data} = await model.users.findAll()
+        let data = await model.users.findAll()
         return res.status(200).json(data)
 
     } catch (error) {

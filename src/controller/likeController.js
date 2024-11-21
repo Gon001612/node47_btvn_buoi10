@@ -6,7 +6,7 @@ const model = initModels(sequelize);
 
 const getLikeRes = async (req, res) => {
     try {
-        let data = await model.rate_res.findAll();
+        let data = await model.like_res.findAll();
         return res.status(200).json(data)
     } catch (error) {
         return res.status(500).json({ message: "Error API get like restaurent" })

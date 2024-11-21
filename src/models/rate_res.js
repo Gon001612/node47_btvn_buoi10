@@ -31,8 +31,9 @@ export default class rate_res extends Model {
       allowNull: true
     },
     date_rate: {
-      type: DataTypes.DATEONLY,
-      allowNull: true
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: Sequelize.NOW,
     }
   }, {
     sequelize,
